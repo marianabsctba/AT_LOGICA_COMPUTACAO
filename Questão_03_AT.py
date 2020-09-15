@@ -1,4 +1,4 @@
-#Questão 01 AT
+#Questão 03 do AT
 
 TEXT_WARNING = "Seus gastos totais com {tipo} comprometem {atingido:.2f}% desua renda total. " \
                "O máximo recomendado é de {recomendado_percent:.2f}%. " \
