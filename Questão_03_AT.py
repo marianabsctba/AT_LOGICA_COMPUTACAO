@@ -1,8 +1,8 @@
 #Questão 03 do AT
 
-TEXT_WARNING = "Seus gastos totais com {tipo} comprometem {atingido:.2f}% desua renda total. " \
+TEXT_WARNING = "Seus gastos totais com {tipo} comprometem {atingido:.2f}% da sua renda total. " \
                "O máximo recomendado é de {recomendado_percent:.2f}%. " \
-               "Portanto, idealmente, o máximo de sua renda comprometida com moradia deveria ser de R$" \
+               "Portanto, idealmente, o máximo da sua renda comprometida com moradia deveria ser de R$" \
                "{recomendado_valor:.2f}."
 
 TEXT_HEALTH = "Seus gastos totais com {tipo} comprometem {atingido:.2f}% de sua renda total. " \
