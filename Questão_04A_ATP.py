@@ -1,51 +1,41 @@
 
-TEXT_WARNING = "Seus gastos totais com {tipo} comprometem {atingido:.2f}% desua renda total. " \
-               "O máximo recomendado é de {recomendado_percent:.2f}%. " \
-               "Portanto, idealmente, o máximo de sua renda comprometida com moradia deveria ser de R$" \
-               "{recomendado_valor:.2f}."
-
-TEXT_HEALTH = "Seus gastos totais com {tipo} comprometem {atingido:.2f}% de sua renda total. " \
-              "O máximo recomendado é de {recomendado_percent:.2f}%. " \
-              "Seus gastos estão dentro da margem recomendada."
+TEXT_OUTPUT = "Após {periodo} períodos(s), o montante será de R$"\
+              "{valor_total:.2f}"
 
 
-FINANCIAL_RANGES = {
-    'moradia': 30,
-    'educacao': 20,
-    'transporte': 15
-}
-
-FINANCIAL_LANG = {
-    'moradia': "moradia",
-    'educacao': "educação",
-    'transporte': "transporte"
-}
+def get_valor_inicial():
+    return float(input("Valor inicial: R$ "))
 
 
-def get_total():
-    return float(input("Renda mensal total: "))
+def get_rendimento():
+    return float(input("Rendimento por período (%): "))
 
 
-def diagnostico(total, values):
-    for tipo in FINANCIAL_RANGES:
-        percent = values[tipo]/total*100
-        if percent > FINANCIAL_RANGES[tipo]:
-            print(TEXT_WARNING.format(tipo=FINANCIAL_LANG[tipo],
-                  atingido=percent,
-                  recomendado_percent=FINANCIAL_RANGES[tipo],
-                  recomendado_valor=FINANCIAL_RANGES[tipo]/100*total))
-        else:
-            print(TEXT_HEALTH.format(tipo=FINANCIAL_LANG[tipo],
-                  atingido=percent,
-                  recomendado_percent=FINANCIAL_RANGES[tipo],
-                  recomendado_valor=FINANCIAL_RANGES[tipo]/100*total))
+def get_aporte_periodo():
+    return float(input("Aporte a cada período: R$ "))
 
 
-def get_values():
-    values = {}
-    for tipo in FINANCIAL_RANGES:
-        values[tipo] = float(input(f"Gastos totais com {tipo}: "))
-    return values
+def get_total_periodos():
+    return int(input("Total de períodos: "))
 
 
-diagnostico(get_total(), get_values())
+def calculate(aporte, total, rendimento):
+    return (total*(1+rendimento/100))+aporte
+
+
+def run(step, max, aporte, total, rendimento):
+    if step > max:
+        return None
+
+    valor_total = calculate(aporte, total, rendimento)
+    print(TEXT_OUTPUT.format(valor_total=valor_total, periodo=step))
+
+    return run(step+1, max, aporte, valor_total, rendimento)
+
+
+valor_inicial = get_valor_inicial()
+rendimento = get_rendimento()
+aporte = get_aporte_periodo()
+periodo = get_total_periodos()
+
+run(1, periodo, aporte, valor_inicial, rendimento)
