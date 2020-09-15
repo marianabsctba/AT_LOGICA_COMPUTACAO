@@ -33,7 +33,7 @@ def verify(data, salary, name):
         if values_max > verification[types]:
             print(f"Você ultrapassou o percentual recomendado.")
             print(f"O valor máximo que você pode destinar a {str(types)} "
-                  f"é de R$ {round((verification[types] * salary) / 100, 2):.2f}.")
+                  f"é de R$ {verification[types] * salary:.2f}.")
             print("~~" * 30)
 
         else:
@@ -57,3 +57,4 @@ verify(data, salary, name)
 
 print("Fim. Obrigado por usar Help Check! Volte sempre!")
 print("==" * 30)
+
