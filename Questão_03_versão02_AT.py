@@ -7,7 +7,7 @@ def print_initial_data(name, salary, get_education, get_home, get_transport):
     print(f"Custos com moradia(R$:.....{get_home:.2f}")
     print(f"Custos com transporte(R$):.{get_transport:.2f}")
     print("==" * 15)
-    
+
 
 def data_dict(salary, get_home, get_education, get_transport):
     data = {"moradia": (get_home / salary) * 100,
@@ -26,8 +26,8 @@ def verify(data, salary, name):
     print("*****====== DIAGNÓSTICO ======*****")
 
     for types, values_max in data.items():
-        print(f"Os seus gastos totais com {str(types)} comprometem {round(values_max, 2)}% da sua renda.")
-        print(f"O percentual máximo recomendado para {str(types)} é de {round(verification[types], 2)}%.")
+        print(f"Os seus gastos totais com {str(types)} comprometem {values_max:.2f}% da sua renda.")
+        print(f"O percentual máximo recomendado para {str(types)} é de {verification[types]:.2f}%.")
         print("~~" * 30)
 
         if values_max > verification[types]:
