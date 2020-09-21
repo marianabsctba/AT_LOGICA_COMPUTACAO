@@ -1,6 +1,3 @@
-#Questão 05 a, b, c. Aqui, decidi fazer a questão em um arquivo. A variação do PIB mostrada se refere exclusivamente ao país digitado 
-# e o gráfico trata da evolução do PIB para este país.
-
 import matplotlib.pyplot as plt
 import time
 
@@ -60,10 +57,10 @@ def retorna_pib():
     x_axis = list(range(2013, 2020 + 1))
     y_axis = [float(valor) for valor in paises[pais_digitado]]
 
-    print(f"O PIB do {pais_digitado} em {ano_digitado} é US$ {pib_pais} trilhões.")
+    print(f"O PIB do {pais_digitado.upper()} em {ano_digitado} é US$ {pib_pais} trilhões.")
     time.sleep(2)
 
-    print(f"A variação do PIB do {pais_digitado} entre 2013 a 2020 é {variacao:.2f}")
+    print(f"A variação do PIB do {pais_digitado.upper()} entre 2013 a 2020 é {variacao:.2f}")
     time.sleep(2)
 
     print(f"Agora veja o gráfico com a evolução do PIB do {pais_digitado} por ano.")
