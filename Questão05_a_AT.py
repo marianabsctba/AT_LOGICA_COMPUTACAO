@@ -1,5 +1,7 @@
 import matplotlib.pyplot as plt
 
+#Questão 05 A realizada separadamente.
+
 
 def dados_arquivo():
     arquivo = open('assessment_PIB.csv', 'r', encoding='utf-8')
