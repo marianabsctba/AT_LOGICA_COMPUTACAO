@@ -1,5 +1,5 @@
 
-#Essa é a segunda versão da Questão 05, mas feita separadamente.
+#Essa é a segunda versão da Questão 05, mas feita separadamente e que mostra a evolução do PIB de todos os países.
 
 def dados_arquivo():
     arquivo = open('assessment_PIB.csv', 'r', encoding='utf-8')
