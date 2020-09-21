@@ -16,10 +16,10 @@ def dados_arquivo():
 
 
 def digite_ano():
-    ano_usuario = str(input("Digite um ano entre 2013 e 2020: ")).strip()
+    ano_usuario = str(input("Digite um ano (entre 2013 e 2020): ")).strip()
     lista_paises = dados_arquivo()
     if ano_usuario not in lista_paises['país']:
-        print("Valor inválido.")
+        print("Ano inválido. Programa reiniciado.")
         exit(1)
     return ano_usuario
 
@@ -31,7 +31,7 @@ def digite_pais():
         print("País inválido.")
         exit(1)
     if pais_usuario == "país":
-        print("País inválido.")
+        print("País inválido.Programa reiniciado.")
         exit(1)
     return pais_usuario
 
@@ -62,10 +62,10 @@ def retorna_pib():
 
     print(f"O PIB do {pais_digitado} em {ano_digitado} é US$ {pib_pais} trilhões.")
     time.sleep(2)
-    
+
     print(f"A variação do PIB do {pais_digitado} entre 2013 a 2020 é {variacao:.2f}")
     time.sleep(2)
-    
+
     print(f"Agora veja o gráfico com a evolução do PIB do {pais_digitado} por ano.")
     time.sleep(2)
 
