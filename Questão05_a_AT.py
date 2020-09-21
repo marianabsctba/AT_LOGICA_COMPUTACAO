@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 
-#Questão 05 A realizada separadamente.
+#Questão 05 A realizada separadamente. Por favor, insira os arquivos da Questão 05 na mesma pasta do arquivo assessment_PIB.csv.
 
 
 def dados_arquivo():
