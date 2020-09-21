@@ -23,7 +23,7 @@ def verify(data, salary, name):
 
     print(f"\n{name}, aguarde. Estamos processando os seus dados...\n")
     time.sleep(2)
-    print("*****====== DIAGNÓSTICO ======*****")
+    print("\033[1;34m\n*****====== DIAGNÓSTICO ======*****\033[0;0m")
 
     for types, values_max in data.items():
         print(f"Os seus gastos totais com {str(types)} comprometem {values_max:.2f}% da sua renda.")
@@ -42,7 +42,7 @@ def verify(data, salary, name):
 
 
 print("==" * 30)
-print("Olá, bem-vindo(a) ao HelpCheck, o seu simulador de orçamento!")
+print("\033[1;34m\nOlá, bem-vindo(a) ao HelpCheck, o seu simulador de orçamento!\n\033[0;0m")
 print("==" * 30)
 
 name = str(input("\nDigite o seu nome: ")).upper().strip()
@@ -55,6 +55,7 @@ data = data_dict(salary, get_home, get_education, get_transport)
 print_initial_data(name, salary, get_education, get_home, get_transport)
 verify(data, salary, name)
 
-print("Fim. Obrigado por usar Help Check! Volte sempre!")
+print("\033[1;34m\nFim. Obrigado por usar Help Check! Volte sempre!\033[0;0m")
 print("==" * 30)
+
 
