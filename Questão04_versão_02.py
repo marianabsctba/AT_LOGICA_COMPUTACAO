@@ -1,3 +1,4 @@
+#uestão 04 a e b. Por favor, insira este arquivo conjuntamente com o arquivo home.html na mesma pasta. 
 from flask import Flask, render_template, request
 import json
 
