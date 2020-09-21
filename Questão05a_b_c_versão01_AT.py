@@ -62,8 +62,10 @@ def retorna_pib():
 
     print(f"O PIB do {pais_digitado} em {ano_digitado} é US$ {pib_pais} trilhões.")
     time.sleep(2)
+    
     print(f"A variação do PIB do {pais_digitado} entre 2013 a 2020 é {variacao:.2f}")
     time.sleep(2)
+    
     print(f"Agora veja o gráfico com a evolução do PIB do {pais_digitado} por ano.")
     time.sleep(2)
 
