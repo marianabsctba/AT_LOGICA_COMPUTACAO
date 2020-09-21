@@ -1,4 +1,5 @@
-#Questão 05 a, b, c. Aqui, decidi fazer a questão em um arquivo. A variação do PIB mostrada se refere exclusivamente ao país digitado e o gráfico trata da evolução do PIB para este país.
+#Questão 05 a, b, c. Aqui, decidi fazer a questão em um arquivo. A variação do PIB mostrada se refere exclusivamente ao país digitado 
+# e o gráfico trata da evolução do PIB para este país.
 
 import matplotlib.pyplot as plt
 import time
