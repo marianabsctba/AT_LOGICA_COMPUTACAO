@@ -1,4 +1,4 @@
-# Essa é a questão 03 do AT, contendo as letras A e B do enunciado.
+# Essa é a questão 04 do AT, contendo as letras A e B do enunciado.
 
 import matplotlib.pyplot as plt
 import time
