@@ -1,4 +1,5 @@
-#uestão 04 a e b. Por favor, insira este arquivo conjuntamente com o arquivo home.html na mesma pasta. 
+#Questão 04 a e b, versão 02. Por favor, insira este arquivo cna mesma pasta do arquivo home.html.
+
 from flask import Flask, render_template, request
 import json
 
