@@ -1,3 +1,6 @@
+#Questão 05 com letras a, b e c conjuntamente. Aqui apenas será informada a evolução do PIB do país digitado.
+#Por favor, insira os arquivos da Questão 05 na mesma pasta do arquivo assessment_PIB.csv.
+
 import matplotlib.pyplot as plt
 import time
 
