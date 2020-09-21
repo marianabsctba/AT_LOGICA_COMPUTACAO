@@ -1,5 +1,5 @@
 
-#Essa é a segunda versão da Questão 05, mas feita separadamente e que mostra a evolução do PIB de todos os países.
+#Essa é a segunda versão da Questão 05b, mas feita separadamente e que mostra a evolução do PIB de todos os países.
 
 def dados_arquivo():
     arquivo = open('assessment_PIB.csv', 'r', encoding='utf-8')
@@ -19,4 +19,7 @@ def get_variacao():
         print(f"A variação do PIB do {pais} entre 2013 a 2020 é de US$ {variacao:.2f} trilhões.")
 
 
+print("\033[1;34m\nAgora veja a variação do PIB por países: \n\033[0;0m")
+print("\033[1;34m==\033[0;0m" * 40)
 get_variacao()
+print("\033[1;34m==\033[0;0m" * 40)
