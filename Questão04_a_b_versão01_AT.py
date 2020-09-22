@@ -51,10 +51,10 @@ def criar_grafico(x, y):
     print("\033[33mEstamos processando as suas informações. Por favor, aguarde...\n\033[0;0m")
     lin()
     time.sleep(3)
-    plt.plot(x, y)
-    plt.xlabel('Periodos (meses)')
-    plt.ylabel('Valor (R$)')
-    plt.title('Projeção dos Juros Compostos')
+    plt.plot(x, y, color="green")
+    plt.xlabel("Periodos (meses)", color="green")
+    plt.ylabel("Valor (R$)", color="red")
+    plt.title("Projeção dos Juros Compostos", color="blue")
 
     plt.show()
 
