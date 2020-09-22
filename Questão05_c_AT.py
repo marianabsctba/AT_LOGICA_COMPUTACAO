@@ -1,3 +1,5 @@
+#Questão 05c realizada de modo separado. Favor inserir os arquivos .py da questão 05 com o arquivo assessment_PIB.csv.
+
 import matplotlib.pyplot as plt
 import time
 
@@ -28,10 +30,10 @@ def digite_pais():
 
 
 def grafico(x_axis, y_axis):
-    plt.plot(x_axis, y_axis)
-    plt.xlabel('Anos')
-    plt.ylabel('Valor em trilhões (US$)')
-    plt.title('PIB')
+    plt.plot(x_axis, y_axis, color='orange', linewidth=2.5, linestyle="-")
+    plt.xlabel('Anos', color='#17a589')
+    plt.ylabel('Valor em trilhões (US$)', color='red')
+    plt.title('PIB', color='#f4d03f')
     plt.show()
 
 
@@ -49,6 +51,3 @@ def retorna_grafico():
 
 
 retorna_grafico()
-print("\033[1;34m==\033[0;0m" * 30)
-print("FIM. Volte sempre!")
-print("\033[1;34m==\033[0;0m" * 30)
