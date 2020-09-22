@@ -3,7 +3,6 @@
 import matplotlib.pyplot as plt
 import time
 
-
 def dados_arquivo():
     arquivo = open('assessment_PIB.csv', 'r', encoding='utf-8')
     arquivo = arquivo.read()
@@ -30,10 +29,10 @@ def digite_pais():
 
 
 def grafico(x_axis, y_axis):
-    plt.plot(x_axis, y_axis, color='orange', linewidth=2.5, linestyle="-")
-    plt.xlabel('Anos', color='#17a589')
+    plt.plot(x_axis, y_axis, color='blue', linewidth=2.5, linestyle="-")
+    plt.xlabel('Anos', color='green')
     plt.ylabel('Valor em trilhões (US$)', color='red')
-    plt.title('PIB', color='#f4d03f')
+    plt.title('PIB', color='blue')
     plt.show()
 
 
