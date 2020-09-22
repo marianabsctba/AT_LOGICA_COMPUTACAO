@@ -15,11 +15,28 @@ def dados_arquivo():
     return lista_paises
 
 
+def lin():
+    print("\033[1;34m==\033[0;0m" * 40)
+
+
+def menu():
+    lin()
+    print("""\033[1;34m\nOlá, seja bem-vindo(a) ao WorldPIB.\033[0;0m
+Você poderá checar o PIB de alguns países do mundo. Vamos lá?\n
+(use acentos gráficos ao informar o país)""")
+
+
+def bye():
+    print("\033[1;34mFIM. Obrigada por usar WorldPIB!\033[0;0m")
+    lin()
+
+
 def digite_ano():
+    lin()
     ano_usuario = str(input("Digite um ano (entre 2013 e 2020): ")).strip()
     lista_paises = dados_arquivo()
     if ano_usuario not in lista_paises['país']:
-        print("Ano inválido. Programa reiniciado.")
+        print("\033[1;31mAno inválido. Programa reiniciado.\033[0;0m")
         exit(1)
     return ano_usuario
 
@@ -28,10 +45,10 @@ def digite_pais():
     pais_usuario = str(input("Digite um país: ")).lower().strip()
     lista_paises = dados_arquivo()
     if pais_usuario not in lista_paises:
-        print("País inválido.")
+        print("\033[1;31mPaís inválido. Programa reiniciado.\033[0;0m")
         exit(1)
     if pais_usuario == "país":
-        print("País inválido.Programa reiniciado.")
+        print("\033[1;31mPaís inválido. Programa reiniciado.\033[0;0m")
         exit(1)
     return pais_usuario
 
@@ -60,16 +77,22 @@ def retorna_pib():
     x_axis = list(range(2013, 2020 + 1))
     y_axis = [float(valor) for valor in paises[pais_digitado]]
 
-    print(f"O PIB do {pais_digitado.upper()} em {ano_digitado} é US$ {pib_pais} trilhões.")
+    lin()
+    print(f"O PIB do país {pais_digitado.upper()} em {ano_digitado} é de US$ {pib_pais} trilhões.")
     time.sleep(2)
 
+    lin()
     print(f"A variação do PIB do {pais_digitado.upper()} entre 2013 a 2020 é de US$ {variacao:.2f} trilhões.")
     time.sleep(2)
 
-    print(f"Agora veja o gráfico com a evolução do PIB do {pais_digitado}, de 2013 a 2020.")
+    lin()
+    print(f"Agora veja o gráfico com a evolução do PIB do país {pais_digitado.upper()}, de 2013 a 2020.")
+    lin()
     time.sleep(2)
 
     grafico(x_axis, y_axis)
 
 
+menu()
 retorna_pib()
+bye()
