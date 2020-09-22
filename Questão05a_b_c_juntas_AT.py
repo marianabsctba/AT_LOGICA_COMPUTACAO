@@ -23,7 +23,7 @@ def menu():
     lin()
     print("""\033[1;34m\nOlá, seja bem-vindo(a) ao WorldPIB.\033[0;0m
 Você poderá checar o PIB de alguns países do mundo. Vamos lá?\n
-(use acentos gráficos ao informar o país)""")
+(use acentos gráficos ao informar o país, caso existentes.)""")
 
 
 def bye():
@@ -58,9 +58,9 @@ def get_variacao(paises, pais_digitado):
 
 
 def grafico(x_axis, y_axis):
-    plt.plot(x_axis, y_axis)
-    plt.xlabel('Anos')
-    plt.ylabel('Valor em trilhões (US$)')
+    plt.plot(x_axis, y_axis, color='orange', linewidth=2.5, linestyle="-")
+    plt.xlabel('Anos', color='#17a589')
+    plt.ylabel('Valor em trilhões (US$)', color='red')
     plt.title('PIB')
     plt.show()
 
